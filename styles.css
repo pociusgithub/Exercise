@@ -1,0 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    height: 50vh;
+    background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
+  }
+
+  .selection__card {
+      justify-content: center;
+      display: grid;
+      grid-template-columns: auto auto auto auto;
+      top: center;
+      grid-gap: 5px;
+      padding: 10px;
+      margin: 40px;
+      perspective: 1000px;
+  }
+
+  .card__image {
+    height: (100% / 4);
+    width: 100%;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform .5s;
+  }
+
+  .card__image:active {
+    transition: transform .2s;
+  }
+
+  .front-face,
+  .back-face {
+    height: 10vh;
+    width: 10vh;
+    padding: auto;
+    backface-visibility: hidden;
+  }
+
+  .card__image.flip {
+    transform: rotateY(180deg);
+  }
+
+
+  .front-face {
+    transform: rotateY(180deg);
+  }
+
+  h1 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: #005bff;
+  }
+
+  .first {
+    margin: 20px;
+  }
